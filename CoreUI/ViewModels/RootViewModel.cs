@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CoreUI
+namespace CoreUI.ViewModels
 {
 	public class RootViewModel : Screen
 	{
