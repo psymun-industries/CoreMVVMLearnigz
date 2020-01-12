@@ -1,19 +1,33 @@
 ﻿using Stylet;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CoreUI.ViewModels
 {
 	public class RootViewModel : Screen
 	{
-		public string Welcome { get; set; }
+		private string _welcome;
+		private string _defaultWelcome =
+				"Eventually this application will do something very exciting indeed.\n" +
+				"For now, enjoy reading this pleasant text.";
+
+		public string Welcome
+		{
+			get => _welcome;
+			set
+			{
+				_welcome = value;
+				NotifyOfPropertyChange(() => Welcome);
+			}
+		}
 
 		public RootViewModel()
 		{
-			Welcome =
-				"Eventually this application will do something very exciting indeed. " +
-				"For now, enjoy reading this pleasant text.";
+			Welcome = _defaultWelcome;
 		}
+
+		public void ChangeWT()
+		{
+			Welcome = "turd";
+		}
+
 	}
 }
