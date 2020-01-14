@@ -5,7 +5,7 @@
 		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 		xmlns:s="https://github.com/canton7/Stylet"
 		mc:Ignorable="d"
-		Title="Application Main" Height="450" Width="800"
+		Height="450" Width="800"
 		MinHeight="450" MinWidth="400">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -22,21 +22,19 @@
 
         <Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
             <MenuItem Header="_System">
-                <MenuItem Header="Change _Welcome text..."/>
+                <MenuItem Header="Change _Welcome text..."
+                          Command="{s:Action ShowCWTV}"/>
             </MenuItem>
         </Menu>
 
         <Border BorderBrush="CornflowerBlue" BorderThickness="2" CornerRadius="5"
 				Grid.Column="1" Grid.Row="2" 
 				Padding="15" HorizontalAlignment="Center" VerticalAlignment="Center">
+            
             <TextBlock Text="{Binding Welcome}" FontSize="24"
 					   TextWrapping="WrapWithOverflow" TextTrimming="CharacterEllipsis"
 					   ToolTip="This should be pleasant text."/>
+            
         </Border>
-
-        <Button Grid.Column="1" Grid.Row="3"
-				Margin="60,15" Command="{s:Action ChangeWT}">
-            Change Welcome text
-        </Button>
     </Grid>
 </Window>
