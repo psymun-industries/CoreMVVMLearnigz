@@ -1,6 +1,5 @@
 ﻿using Stylet;
 using System;
-using System.Linq;
 
 namespace CoreUI.ViewModels
 {
@@ -35,6 +34,11 @@ namespace CoreUI.ViewModels
 			Welcome = wt;
 		}
 
+		public void ResetWT()
+		{
+			Welcome = _defaultWelcome;
+		}
+
 		public void ShowCWTV()
 		{
 			var viewModel = new ChangeWelcomeTextViewModel();
@@ -47,6 +51,7 @@ namespace CoreUI.ViewModels
 			{
 				this.Welcome = viewModel.UserInput;
 			}
+
 		}
 
 		private string Greeting()
@@ -76,17 +81,17 @@ namespace CoreUI.ViewModels
 		private string HandleUserName(string name)
 		{
 			var un = name;
-			if (un.Length == 0)
+			if (String.IsNullOrEmpty(un))
 			{
 				return "my dear user";
 			}
-			else if (un.Length == 1)
+			else if (un.Length >= 32)
 			{
-				return un.ToUpper();
+				return "Captain Long Username";
 			}
 			else
 			{
-				return un.First().ToString().ToUpper() + un.Substring(1);
+				return un;
 			}
 		}
 	}
