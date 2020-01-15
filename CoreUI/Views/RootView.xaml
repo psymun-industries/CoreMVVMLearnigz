@@ -23,7 +23,7 @@
 
 		<Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
 			<MenuItem Header="_System">
-				<MenuItem Header="_Change Plesant Text..."
+				<MenuItem Header="_Change Pleasant Text..."
 						  Command="{s:Action ShowChangeTextView}"/>
 				<Separator/>
 				<MenuItem Header="_Reset Text"
