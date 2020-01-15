@@ -26,20 +26,15 @@ namespace CoreUI.ViewModels
 			_wm = windowManager;
 			Welcome = _defaultWelcome;
 
-			this.DisplayName = Greeting();
+			this.DisplayName = WindowGreeting();
 		}
-
-		public void ChangeWT(string wt)
-		{
-			Welcome = wt;
-		}
-
-		public void ResetWT()
+		
+		public void ResetText()
 		{
 			Welcome = _defaultWelcome;
 		}
 
-		public void ShowCWTV()
+		public void ShowChangeTextView()
 		{
 			var viewModel = new ChangeWelcomeTextViewModel();
 
@@ -54,7 +49,7 @@ namespace CoreUI.ViewModels
 
 		}
 
-		private string Greeting()
+		private string WindowGreeting()
 		{
 			int hour = DateTime.Now.Hour;
 			int min = DateTime.Now.Minute;

@@ -5,7 +5,8 @@
 		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 		xmlns:s="https://github.com/canton7/Stylet"
 		mc:Ignorable="d"
-		Height="250" Width="300" WindowStyle="ThreeDBorderWindow" ResizeMode="NoResize">
+		Height="250" Width="300" ResizeMode="NoResize">		
+	
 	<Grid>
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="10"/>

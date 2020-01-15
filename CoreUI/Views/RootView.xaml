@@ -5,8 +5,9 @@
 		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 		xmlns:s="https://github.com/canton7/Stylet"
 		mc:Ignorable="d"
-		Height="450" Width="800"
-		MinHeight="300" MinWidth="300">
+		Height="450" Width="800" MinHeight="300" MinWidth="300"
+		WindowStyle="ThreeDBorderWindow">
+    
 	<Grid>
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition/>
@@ -22,11 +23,11 @@
 
 		<Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
 			<MenuItem Header="_System">
-				<MenuItem Header="Change _Welcome text..."
-						  Command="{s:Action ShowCWTV}"/>
+				<MenuItem Header="_Change Plesant Text..."
+						  Command="{s:Action ShowChangeTextView}"/>
 				<Separator/>
-				<MenuItem Header="_Reset Welcome text"
-						  Command="{s:Action ResetWT}"/>
+				<MenuItem Header="_Reset Text"
+						  Command="{s:Action ResetText}"/>
 			</MenuItem>
 		</Menu>
 
