@@ -75,18 +75,17 @@ namespace CoreUI.ViewModels
 
 		private string HandleUserName(string name)
 		{
-			var un = name;
-			if (String.IsNullOrEmpty(un))
+			if (String.IsNullOrEmpty(name))
 			{
 				return "my dear user";
 			}
-			else if (un.Length >= 32)
+			else if (name.Length >= 32)
 			{
 				return "Captain Long Username";
 			}
 			else
 			{
-				return un;
+				return name;
 			}
 		}
 	}
